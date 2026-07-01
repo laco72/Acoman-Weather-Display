@@ -71,6 +71,74 @@ Future updates can be installed directly from the built-in OTA web interface wit
 
 ---
 
+## 📦 First Installation (New Device)
+
+### Requirements
+
+- ESP32E 2.8" Display (SKU: E32R28T-1)
+- USB cable
+- [ESP32 Flash Download Tool v3.9.10](https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_stage/tools/flash_download_tool.html)
+
+### Step 1 — Flash the firmware (one time only via USB)
+
+Download all 4 files from the **Releases** section and flash them using ESP32 Flash Download Tool:
+
+| File | Address |
+|------|---------|
+| `bootloader.bin` | `0x1000` |
+| `partitions.bin` | `0x8000` |
+| `boot_app0.bin` | `0xE000` |
+| `firmware.bin` | `0x10000` |
+
+**Flash Download Tool settings:**
+- ChipType: `ESP32`
+- WorkMode: `Develop`
+- SPI Speed: `80MHz`
+- SPI Mode: `DIO`
+- Baud: `921600`
+
+Click **START**. When finished, disconnect and reconnect the USB.
+
+---
+
+### Step 2 — WiFi Setup
+
+On first boot, the device creates a temporary WiFi network:
+
+1. Connect your phone to **`Acoman-Setup`** (Password: `12345678`)
+2. Open your browser → go to `192.168.4.1`
+3. Select your home WiFi network and enter the password
+4. The device restarts and connects to your WiFi
+
+---
+
+### Step 3 — Open Settings
+
+Long press the display → IP address appears.  
+Open `http://[IP address]` in your browser to configure:
+
+- Location / city
+- Language
+- Display brightness
+- RGB LED
+- Photos
+
+---
+
+### ⬆️ Future Updates (OTA — no USB needed)
+
+After the first installation, all future firmware updates can be done wirelessly:
+
+1. Open `http://[IP address]` in your browser
+2. Scroll down to **Firmware** section
+3. Click **Update firmware**
+4. Select the new `.bin` file
+5. Click **Upload and flash**
+
+The device restarts automatically with the new firmware. ✅
+
+---
+
 ## 📖 User Guide
 
 The complete English User Guide is available here:
@@ -128,8 +196,7 @@ Thank you for your support! ❤️
 
 If you enjoy this project and would like to support future development, you can buy me a coffee on Ko-fi.
 
-**Ko-fi**
-
+**Ko-fi**  
 https://ko-fi.com/acoman72
 
 Your support helps fund:
