@@ -1,5 +1,7 @@
 # 🌤️ Acoman Weather Display
 
+[![Buy Me a Coffee](buy_me_a_coffee.png)](https://ko-fi.com/acoman72)
+
 ![Weather Display](display.jpg)
 
 Modern ESP32 Weather Display firmware with OTA updates and a multilingual web interface.
