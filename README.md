@@ -1,5 +1,7 @@
 # 🌤️ Acoman Weather Display
 
+![Weather Display](display.jpg)
+
 Modern ESP32 Weather Display firmware with OTA updates and a multilingual web interface.
 
 ---
@@ -17,7 +19,9 @@ Modern ESP32 Weather Display firmware with OTA updates and a multilingual web in
 - Automatic Night Mode
 - Multilingual web interface
 
-### 🌍 Supported Languages
+---
+
+## 🌍 Supported Languages
 
 - 🇬🇧 English
 - 🇸🇰 Slovak
@@ -32,7 +36,7 @@ Modern ESP32 Weather Display firmware with OTA updates and a multilingual web in
 
 ## ☁️ Weather Data
 
-Weather data is provided by the free Open-Meteo API.
+Weather data is provided by the free **Open-Meteo API**.
 
 ### Benefits
 
@@ -65,162 +69,200 @@ Currently tested only with:
 
 Download the latest firmware from the **Releases** section.
 
-The firmware is provided as a **.bin** file.
-
-Future updates can be installed directly from the built-in OTA web interface without using Arduino IDE.
+Future updates can be installed directly from the built-in OTA web interface.
 
 ---
 
-## 📦 First Installation (New Device)
+## 📦 First Installation
 
 ### Requirements
 
 - ESP32E 2.8" Display (SKU: E32R28T-1)
 - USB cable
-- [ESP32 Flash Download Tool (latest version)](https://dl.espressif.com/public/flash_download_tool.zip)
+- ESP32 Flash Download Tool
 
-### Step 1 — Flash the firmware (one time only via USB)
-
-Download all 4 files from the **Releases** section and flash them using ESP32 Flash Download Tool:
+### Flash addresses
 
 | File | Address |
 |------|---------|
-| `bootloader.bin` | `0x1000` |
-| `partitions.bin` | `0x8000` |
-| `boot_app0.bin` | `0xE000` |
-| `firmware.bin` | `0x10000` |
+| bootloader.bin | 0x1000 |
+| partitions.bin | 0x8000 |
+| boot_app0.bin | 0xE000 |
+| firmware.bin | 0x10000 |
 
-**Flash Download Tool settings:**
-- ChipType: `ESP32`
-- WorkMode: `Develop`
-- SPI Speed: `80MHz`
-- SPI Mode: `DIO`
-- Baud: `921600`
+Flash Download Tool settings:
 
-Click **START**. When finished, disconnect and reconnect the USB.
-
----
-
-### Step 2 — WiFi Setup
-
-On first boot, the device creates a temporary WiFi network:
-
-1. Connect your phone to **`Acoman-Setup`** (Password: `12345678`)
-2. Open your browser → go to `192.168.4.1`
-3. Select your home WiFi network and enter the password
-4. The device restarts and connects to your WiFi
+- Chip: ESP32
+- Work Mode: Develop
+- SPI Speed: 80 MHz
+- SPI Mode: DIO
+- Baud: 921600
 
 ---
 
-### Step 3 — Open Settings
+## 📶 First WiFi Setup
 
-Long press the display → IP address appears.  
-Open `http://[IP address]` in your browser to configure:
+On first boot the device creates:
 
-- Location / city
-- Language
-- Display brightness
-- RGB LED
-- Photos
+SSID
+
+```
+Acoman-Setup
+```
+
+Password
+
+```
+12345678
+```
+
+Open
+
+```
+http://192.168.4.1
+```
+
+Configure your WiFi and restart the device.
 
 ---
 
-### ⬆️ Future Updates (OTA — no USB needed)
+## 🌐 Web Interface
 
-After the first installation, all future firmware updates can be done wirelessly:
+### Home
 
-1. Open `http://[IP address]` in your browser
-2. Scroll down to **Firmware** section
-3. Click **Update firmware**
-4. Select the new `.bin` file
-5. Click **Upload and flash**
+![Home](web_home.jpg)
 
-The device restarts automatically with the new firmware. ✅
+---
+
+### Language
+
+![Language](web_language.jpg)
+
+---
+
+### Location
+
+![Location](web_location.jpg)
+
+---
+
+### Display Settings
+
+![Display](web_display.jpg)
+
+---
+
+### Photo Manager
+
+![Photo Manager](web_photo_manager.jpg)
+
+---
+
+### Firmware Update (OTA)
+
+![Firmware](web_firmware.jpg)
+
+---
+
+## 🖥️ Display Screens
+
+### Current Weather
+
+![Current Weather](display.jpg)
+
+---
+
+### Hourly Forecast
+
+![Hourly Forecast](hourly_forecast.jpg)
+
+---
+
+### 5-Day Forecast
+
+![5-Day Forecast](daily_forecast.jpg)
+
+---
+
+### Photo Slideshow
+
+![Photo Slideshow](photo_slideshow.jpg)
+
+---
+
+## 🌈 RGB LED Effects
+
+| Green | Blue | Pink |
+|-------|------|------|
+| ![](rgb_green.jpg) | ![](rgb_blue.jpg) | ![](rgb_pink.jpg) |
 
 ---
 
 ## 📖 User Guide
 
-The complete English User Guide is available here:
+Complete documentation:
 
-**docs/User_Guide_EN.pdf**
+**User_Guide_EN.pdf**
 
 ---
 
-## 🖼️ 3D Printed Enclosure
+## 🖨️ 3D Printed Enclosure
 
-This repository contains **firmware only**.
+This repository contains firmware only.
 
-The 3D enclosure is **NOT included**.
+The enclosure is **NOT included**.
 
-The enclosure was designed by another creator and can be downloaded from MakerWorld:
+Download it from MakerWorld:
 
 https://makerworld.com/cs/models/1382304-aura-smart-weather-forecast-display
 
-**Full credit for the enclosure goes to the original designer.**
+Full credit goes to the original designer.
 
 ---
 
 ## 🚀 Future Development
 
-This project is actively under development.
-
-Support for additional ESP32 display boards will be added as new hardware becomes available for testing.
-
-If you would like to support the project, your Ko-fi donations help fund the purchase of additional ESP32 display modules for development, testing and compatibility improvements.
-
-### Planned hardware support
+Planned support:
 
 - ESP32-2432S028R
-- ESP32-3248S035 (3.5")
+- ESP32-3248S035
 - ESP32-8048S043
 - ESP32-8048S070
-- Other ESP32 display boards
-
-Future plans also include:
-
-- Additional display sizes
-- More language translations
-- New display themes
-- More weather information
+- More display sizes
+- More themes
+- Additional languages
 - Performance improvements
 - Bug fixes
-
-Every contribution helps make this project better.
-
-Thank you for your support! ❤️
 
 ---
 
 ## ☕ Support
 
-If you enjoy this project and would like to support future development, you can buy me a coffee on Ko-fi.
+If you enjoy this project, you can support future development via Ko-fi.
 
-**Ko-fi**  
 https://ko-fi.com/acoman72
 
 Your support helps fund:
 
-- New ESP32 display boards
-- Development and testing
+- New ESP32 hardware
+- Development
+- Testing
 - New firmware features
-- Compatibility improvements
-- Long-term project maintenance
+- Long-term maintenance
 
-Thank you very much for your support! ❤️
-
+Thank you! ❤️
 
 ---
 
 ## 🛒 Where to Buy
 
-The tested hardware (**ESP32E 2.8" Display, SKU: E32R28T-1**) is available from these retailers:
+Tested hardware:
 
-- **AliExpress** – https://www.aliexpress.com/item/1005009659317465.html
-- **Amazon** – search for: `ESP32 2.8 inch TFT Display E32R28T-1`
-- **eBay** – search for: `ESP32 2.8 inch TFT Display E32R28T-1`
+**ESP32E 2.8" Display (E32R28T-1)**
 
-> Prices and availability may vary. AliExpress is usually the most affordable option.
+- AliExpress
+- Amazon
+- eBay
 
 ---
 
@@ -228,8 +270,4 @@ The tested hardware (**ESP32E 2.8" Display, SKU: E32R28T-1**) is available from 
 
 Copyright © 2026 Acoman72
 
-This repository contains documentation and firmware releases.
-
-The firmware is provided **as is**, without warranty of any kind.
-
-All product names, trademarks and registered trademarks are the property of their respective owners.
+This repository contains firmware releases and documentation.
