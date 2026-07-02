@@ -77,7 +77,7 @@ Future updates can be installed directly from the built-in OTA web interface wit
 
 - ESP32E 2.8" Display (SKU: E32R28T-1)
 - USB cable
-- [ESP32 Flash Download Tool v3.9.10](https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_stage/tools/flash_download_tool.html)
+- [ESP32 Flash Download Tool (latest version)](https://dl.espressif.com/public/flash_download_tool.zip)
 
 ### Step 1 — Flash the firmware (one time only via USB)
 
@@ -208,6 +208,19 @@ Your support helps fund:
 - Long-term project maintenance
 
 Thank you very much for your support! ❤️
+
+
+---
+
+## 🛒 Where to Buy
+
+The tested hardware (**ESP32E 2.8" Display, SKU: E32R28T-1**) is available from these retailers:
+
+- **AliExpress** – https://www.aliexpress.com/item/1005009659317465.html
+- **Amazon** – search for: `ESP32 2.8 inch TFT Display E32R28T-1`
+- **eBay** – search for: `ESP32 2.8 inch TFT Display E32R28T-1`
+
+> Prices and availability may vary. AliExpress is usually the most affordable option.
 
 ---
 
