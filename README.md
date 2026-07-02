@@ -1,6 +1,6 @@
-# 🌤️ Acoman Weather Display
-
 [![Buy Me a Coffee](buy_me_a_coffee.png)](https://ko-fi.com/acoman72)
+
+# 🌤️ Acoman Weather Display
 
 ![Weather Display](display.jpg)
 
