@@ -262,7 +262,7 @@ Tested hardware:
 
 **ESP32E 2.8" Display (E32R28T-1)**
 
-- AliExpress
+- AliExpress https://www.aliexpress.com/item/1005009659317465.html
 - Amazon
 - eBay
 
