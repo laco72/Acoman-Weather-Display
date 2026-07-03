@@ -54,6 +54,9 @@ https://open-meteo.com/
 
 ## 🔧 Supported Hardware
 
+|-------|------|------|
+| ![](1.jpg) | ![](2.jpg) | ![](3.jpg) |
+
 Currently tested only with:
 
 - ESP32E 2.8" Display
